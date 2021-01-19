@@ -14,10 +14,6 @@ public class TestHooks implements En {
             DriverController.initialize();
         });
 
-//        BeforeStep(1, (scenario) -> {
-//            System.out.println("BEFORE STEP: " + scenario.getName());
-//        });
-
         After(scenario -> {
             System.out.println("----END: " + scenario.getName() + "---Status: " + scenario.getStatus());
             DriverController.quitDriver();
